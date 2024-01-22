@@ -1,0 +1,69 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400" KeyDown="OnKeyDown">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Focusable" Value="false"/>
+        </Style>
+    </Window.Resources>
+    <Grid Name="UIElements" Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="textBlock" Grid.Row="0" Grid.ColumnSpan="4" FontSize="35" TextAlignment ="Right" Margin="8" Background="White"/>
+        
+        <!-- 1st Row -->
+        <Button Grid.Row="1" Grid.Column="0" x:Name="leftParenthese" Content="x^2" FontSize="30" Background="LightSlateGray"/>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="rightParenthese" Content="sqrt(x)" FontSize="30" Background="LightSlateGray"/>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="Clear" Content="Clear" FontSize="25" Background="DarkGray"/>
+        <Button Grid.Row="1" Grid.Column="3" x:Name="Delete" Content="Delete" FontSize="25" Background="DarkGray"/>
+
+        <!-- 2nd Row -->
+        <Button Grid.Row="2" Grid.Column="0" x:Name="_1" Content="1" FontSize="30"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="_2" Content="2" FontSize="30"/>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="_3" Content="3" FontSize="30"/>
+        <Button Grid.Row="2" Grid.Column="3" x:Name="Addition" Content="+" FontSize="30" Background="LightSlateGray"/>
+
+        <!-- 3rd Row -->
+        <Button Grid.Row="3" Grid.Column="0" x:Name="_4" Content="4" FontSize="30"/>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="_5" Content="5" FontSize="30"/>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="_6" Content="6" FontSize="30"/>
+        <Button Grid.Row="3" Grid.Column="3" x:Name="Subtraction" Content="-" FontSize="30" Background="LightSlateGray"/>
+
+        <!-- 4th Row -->
+        <Button Grid.Row="4" Grid.Column="0" x:Name="_7" Content="7" FontSize="30"/>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="_8" Content="8" FontSize="30"/>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="_9" Content="9" FontSize="30"/>
+        <Button Grid.Row="4" Grid.Column="3" x:Name="Multiplication" Content="*" FontSize="25" Background="LightSlateGray"/>
+
+        <!-- 5th Row -->
+        <Button Grid.Row="5" Grid.Column="0" x:Name="Dot" Content="," FontSize="30"/>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="_0" Content="0" FontSize="30"/>
+        <Button Grid.Row="5" Grid.Column="2" x:Name="Equal" Content="=" FontSize="30" Background="DarkGray"/>
+        <Button Grid.Row="5" Grid.Column="3" x:Name="Division" Content="/" FontSize="30" Background="LightSlateGray"/>
+
+    </Grid>
+</Window>
